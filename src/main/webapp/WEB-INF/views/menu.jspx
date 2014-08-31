@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_categoriabebida" z="UkUaMUyESKni+us20UQPhb463jg=">
+            <menu:item id="i_categoriabebida_new" messageCode="global_menu_new" url="/categoriabebidas?form" z="/5zoHHjyU/cYQAKSlIvJ7ydCCiw="/>
+            <menu:item id="i_categoriabebida_list" messageCode="global_menu_list" url="/categoriabebidas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4AmqfV0ALJg+F6Gwmrv79vJlEqk="/>
+        </menu:category>
+        <menu:category id="c_bebida" z="/1h4cuuphnvz1CJs87EusrLQvFc=">
+            <menu:item id="i_bebida_new" messageCode="global_menu_new" url="/bebidas?form" z="UVhllwmrp0s31MTPAAG9mLczLDo="/>
+            <menu:item id="i_bebida_list" messageCode="global_menu_list" url="/bebidas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="wxnFLBgcHZTA3Dll5jKpLsw/m8I="/>
+        </menu:category>
+        <menu:category id="c_orden" z="L4rIXlUeEKw7YxNuuu5d7UJvxb8=">
+            <menu:item id="i_orden_new" messageCode="global_menu_new" url="/ordens?form" z="pF/zK0JKWA/gWdfN6RJbfyirMoA="/>
+            <menu:item id="i_orden_list" messageCode="global_menu_list" url="/ordens?page=1&amp;size=${empty param.size ? 10 : param.size}" z="SsZ3RtsBl2X6/VEaSy1f1PKJTnY="/>
+        </menu:category>
+        <menu:category id="c_categoriaplatillo" z="wiTILsqoMexxopwo0uQtgMJZ4Sw=">
+            <menu:item id="i_categoriaplatillo_new" messageCode="global_menu_new" url="/categoriaplatilloes?form" z="tJat1NSH/lJjgPyeVtTMAHS6eZk="/>
+            <menu:item id="i_categoriaplatillo_list" messageCode="global_menu_list" url="/categoriaplatilloes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+GoE1geFb7ui6bIE+T+bQP6cI44="/>
+        </menu:category>
+        <menu:category id="c_agregado" z="8xbqoLkByQHyZqeMOQtc5eIDfdM=">
+            <menu:item id="i_agregado_new" messageCode="global_menu_new" url="/agregadoes?form" z="rMjJvgoMJof8HjmrHWXVt4D51Fs="/>
+            <menu:item id="i_agregado_list" messageCode="global_menu_list" url="/agregadoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nW3j759tj5ElonIoQ1ddnw6zu0A="/>
+        </menu:category>
+        <menu:category id="c_bebida_orden" z="LYvSe3HL8JGcUIEj3Yq2M7Q6m7E=">
+            <menu:item id="i_bebida_orden_new" messageCode="global_menu_new" url="/bebida_ordens?form" z="R92OW3+bb3B6WhMpFa9H84O0LDw="/>
+            <menu:item id="i_bebida_orden_list" messageCode="global_menu_list" url="/bebida_ordens?page=1&amp;size=${empty param.size ? 10 : param.size}" z="3r4mU/xWvVXtBKNfymFNX3FCOXM="/>
+        </menu:category>
+        <menu:category id="c_platillo_orden" z="Z8ITB4FJFDF3/0mVH42Nas8KXvY=">
+            <menu:item id="i_platillo_orden_new" messageCode="global_menu_new" url="/platillo_ordens?form" z="EFMW2+nfSkCX27DqyxyQtXA62js="/>
+            <menu:item id="i_platillo_orden_list" messageCode="global_menu_list" url="/platillo_ordens?page=1&amp;size=${empty param.size ? 10 : param.size}" z="usw3mGw5iHdJ/mB4J4FimxZ1SHw="/>
+        </menu:category>
+        <menu:category id="c_usuario" z="g6oG0656PcsmmvUYeBtpgiQROck=">
+            <menu:item id="i_usuario_new" messageCode="global_menu_new" url="/usuarios?form" z="RG1gCsiZQjg1HLDzXbHKht6yDkw="/>
+            <menu:item id="i_usuario_list" messageCode="global_menu_list" url="/usuarios?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P7ZIPrcTTBR41JYD0QldbYgsZrM="/>
+        </menu:category>
+        <menu:category id="c_estatus" z="Tw/EMPMcqJ4Ap5GminJMT02gPAo=">
+            <menu:item id="i_estatus_new" messageCode="global_menu_new" url="/estatuses?form" z="/5Wpe8WG5X3JDx2s2UG/Rbj/JIw="/>
+            <menu:item id="i_estatus_list" messageCode="global_menu_list" url="/estatuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="UkvlCNzgvzObahHzpTsy3Hq05gs="/>
+        </menu:category>
+        <menu:category id="c_platillo" z="dzQrNtUIdl4xup4f1kUmaBOz3Mk=">
+            <menu:item id="i_platillo_new" messageCode="global_menu_new" url="/platilloes?form" z="Z3sN//bETHJfWPtd0+B5RwTelnE="/>
+            <menu:item id="i_platillo_list" messageCode="global_menu_list" url="/platilloes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ccm2kMwnD2cEVd8dYG7xiztEsGY="/>
+        </menu:category>
+    </menu:menu>
+</div>

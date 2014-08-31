@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_raze_cocina_domain_Platillo" items="${platilloes}" z="eevPUTsaH1XGm0FY4N/CuCWGTos=">
+        <table:table data="${platilloes}" id="l_com_raze_cocina_domain_Platillo" path="/platilloes" z="qvAgmILNRXVbwqbIHmbZUPFg4aE=">
+            <table:column id="c_com_raze_cocina_domain_Platillo_nombre" property="nombre" z="l5M9DjjU0jWdmXaWLMWWTpwImsY="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_descripcion" property="descripcion" z="9KvQH36NVCdF1PQIZ6DJTw2Q/3I="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_categoria" property="categoria" z="ugRObT9mfWGbBDswyZqpPZJYwSs="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_disponibles" property="disponibles" z="qnj9pnB3t27L2J7noHwqyctOnyc="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_precio" property="precio" z="d9+7zlQz3OGsjoFPuwafHxQjFsQ="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_foto" property="foto" z="KGAwzjpxLOGDWbXx6bBhYYD4mwU="/>
+        </table:table>
+    </page:list>
+</div>

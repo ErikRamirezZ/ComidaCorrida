@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_raze_cocina_domain_Platillo_Orden" modelAttribute="platillo_Orden" path="/platillo_ordens" versionField="Version" z="cgxHI1RlrKj6lcj1CYc8BqaW3io=">
+        <field:select field="platillo" id="c_com_raze_cocina_domain_Platillo_Orden_platillo" itemValue="id" items="${platilloes}" path="/platilloes" required="true" z="tNrdt4pVPHhA3X8qOZ8inHF3PZM="/>
+        <field:input field="cantidad" id="c_com_raze_cocina_domain_Platillo_Orden_cantidad" required="true" z="n6LhGmdg59YBD28cIkFdlRF6KdE="/>
+        <field:select field="agregados" id="c_com_raze_cocina_domain_Platillo_Orden_agregados" itemValue="id" items="${agregadoes}" multiple="true" path="/agregadoes" z="kU8yFaD4jVu7tbx1tJlNFoOY8Ww="/>
+        <field:input field="precioUnitario" id="c_com_raze_cocina_domain_Platillo_Orden_precioUnitario" required="true" validationMessageCode="field_invalid_number" z="NqjO3BzdbbgrA+OHCvbLulf+YkM="/>
+    </form:update>
+</div>

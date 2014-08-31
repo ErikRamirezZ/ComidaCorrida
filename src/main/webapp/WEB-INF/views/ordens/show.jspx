@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_raze_cocina_domain_Orden" object="${orden}" path="/ordens" z="bdrrBSthX4GG4187RsDrAvm/rSU=">
+        <field:display field="usuario" id="s_com_raze_cocina_domain_Orden_usuario" object="${orden}" z="QmNhojGUTdY4DzXoBpV5I7QnoMg="/>
+        <field:display field="estatus" id="s_com_raze_cocina_domain_Orden_estatus" object="${orden}" z="X8T+AKqSk9KDUefQb63vXXjPqPw="/>
+        <field:display date="true" dateTimePattern="${orden_fecha_date_format}" field="fecha" id="s_com_raze_cocina_domain_Orden_fecha" object="${orden}" z="0H0AM60UmR5AJ+V70Vtj6J/SHdk="/>
+        <field:display field="observaciones" id="s_com_raze_cocina_domain_Orden_observaciones" object="${orden}" z="AINYJgITJ9OCXyBPbUkO3vxIM5M="/>
+        <field:display field="platillosOrden" id="s_com_raze_cocina_domain_Orden_platillosOrden" object="${orden}" z="SpG3gXHdE6bl567nx5fJGP5PB1U="/>
+        <field:display field="bebidasOrden" id="s_com_raze_cocina_domain_Orden_bebidasOrden" object="${orden}" z="/Ig420MqckEMrQDvH+NHpgmctH0="/>
+        <field:display field="descuento" id="s_com_raze_cocina_domain_Orden_descuento" object="${orden}" z="a+F4a/Y7g+qk5Y6qckS0prEtLvY="/>
+    </page:show>
+</div>

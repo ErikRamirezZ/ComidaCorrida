@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_raze_cocina_domain_Orden" items="${ordens}" z="IhxrdkaB57PXwxpNEHuogSWIpWE=">
+        <table:table data="${ordens}" id="l_com_raze_cocina_domain_Orden" path="/ordens" z="6AlB8gJQkJbwHcSDFPcL2DTmlgA=">
+            <table:column id="c_com_raze_cocina_domain_Orden_usuario" property="usuario" z="XT1ZwCpNCxWXUeEPvjuJ3JUFGxI="/>
+            <table:column id="c_com_raze_cocina_domain_Orden_estatus" property="estatus" z="A8VGEyxQlmPCeikuc7fp4D7caGI="/>
+            <table:column date="true" dateTimePattern="${orden_fecha_date_format}" id="c_com_raze_cocina_domain_Orden_fecha" property="fecha" z="O/Qejb6PqFSDjXZivPz7xRuGIBk="/>
+            <table:column id="c_com_raze_cocina_domain_Orden_observaciones" property="observaciones" z="oF6B7nlTNcl+GLqg4IAVcaBjmRE="/>
+            <table:column id="c_com_raze_cocina_domain_Orden_platillosOrden" property="platillosOrden" z="XeaoKZ2rPyufINKzqu19txX0NRU="/>
+            <table:column id="c_com_raze_cocina_domain_Orden_bebidasOrden" property="bebidasOrden" z="lmDu3IRzzjS2zMdO78fhNlLBUrA="/>
+        </table:table>
+    </page:list>
+</div>

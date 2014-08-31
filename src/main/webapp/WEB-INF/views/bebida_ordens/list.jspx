@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_raze_cocina_domain_Bebida_Orden" items="${bebida_ordens}" z="kp2bVGie7y47L15QwufaJosoKZ0=">
+        <table:table data="${bebida_ordens}" id="l_com_raze_cocina_domain_Bebida_Orden" path="/bebida_ordens" z="bT+C6tO+JqMPRXWD8uHTvoZBwUc=">
+            <table:column id="c_com_raze_cocina_domain_Bebida_Orden_bebida" property="bebida" z="WvLvFvu4g6ZLPKrGW+ncnYvEuVs="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_Orden_cantidad" property="cantidad" z="5dikyBYD/+5jva80WzDtGvHwOJo="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_Orden_precioUnitario" property="precioUnitario" z="8FGfpyyoWlAo0jBv//nB3chqYkg="/>
+        </table:table>
+    </page:list>
+</div>

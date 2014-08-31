@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_raze_cocina_domain_Orden" modelAttribute="orden" path="/ordens" versionField="Version" z="HN7iRs8yXga+hoLFoMCqr0YGJBw=">
+        <field:select field="usuario" id="c_com_raze_cocina_domain_Orden_usuario" itemValue="id" items="${usuarios}" path="/usuarios" z="eXoVrT1cXhpgf/gwtsfV1W4XZkk="/>
+        <field:select field="estatus" id="c_com_raze_cocina_domain_Orden_estatus" itemValue="id" items="${estatuses}" path="/estatuses" z="oxzKPzFkEwKUfxy2DxD/C5iZHgY="/>
+        <field:datetime dateTimePattern="${orden_fecha_date_format}" field="fecha" id="c_com_raze_cocina_domain_Orden_fecha" required="true" z="wF9GBbPoj21l9EHkcS5e4622+L0="/>
+        <field:textarea field="observaciones" id="c_com_raze_cocina_domain_Orden_observaciones" z="aX+gxAkrEzsQpiqHmeQ7esRofsg="/>
+        <field:select field="platillosOrden" id="c_com_raze_cocina_domain_Orden_platillosOrden" itemValue="id" items="${platillo_ordens}" multiple="true" path="/platillo_ordens" z="SG08c0pDTz/AzE7BJxOAHeA57oM="/>
+        <field:select field="bebidasOrden" id="c_com_raze_cocina_domain_Orden_bebidasOrden" itemValue="id" items="${bebida_ordens}" multiple="true" path="/bebida_ordens" z="aCJdvrXupcJZH4iVFX+0SnvnhIs="/>
+        <field:input field="descuento" id="c_com_raze_cocina_domain_Orden_descuento" max="100" z="mvWU6wZYNIQdYkBiVvehkBjPL1A="/>
+    </form:update>
+</div>

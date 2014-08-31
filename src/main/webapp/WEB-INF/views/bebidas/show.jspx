@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_raze_cocina_domain_Bebida" object="${bebida}" path="/bebidas" z="k1RArTosTB8LbGHlCHglKC+W1IM=">
+        <field:display field="nombre" id="s_com_raze_cocina_domain_Bebida_nombre" object="${bebida}" z="vtSNwn0V91VY6V9KfeHHYMbUAW8="/>
+        <field:display field="descripcion" id="s_com_raze_cocina_domain_Bebida_descripcion" object="${bebida}" z="Cpx2aJ0Lz5b4eXU/2d6uUrh0ITw="/>
+        <field:display field="categoria" id="s_com_raze_cocina_domain_Bebida_categoria" object="${bebida}" z="mu9ucKUkIQ1QYIT1nKutcN+aENA="/>
+        <field:display field="disponibles" id="s_com_raze_cocina_domain_Bebida_disponibles" object="${bebida}" z="ao/IH3aivnc6plmDdMm3FkhY4+w="/>
+        <field:display field="precio" id="s_com_raze_cocina_domain_Bebida_precio" object="${bebida}" z="Z6ME91jIVL9UQ2C+l0RdakOYtc8="/>
+        <field:display field="foto" id="s_com_raze_cocina_domain_Bebida_foto" object="${bebida}" z="gXurYJJa21S3wnugXXngWZ6olPs="/>
+    </page:show>
+</div>

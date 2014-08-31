@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_raze_cocina_domain_Platillo_Orden" object="${platillo_orden}" path="/platillo_ordens" z="3lrkMYDLfhlOb+bXC0saYk09Rmc=">
+        <field:display field="platillo" id="s_com_raze_cocina_domain_Platillo_Orden_platillo" object="${platillo_orden}" z="LQ6eVEPxp4mD3RgvjHZ6rVAdtrA="/>
+        <field:display field="cantidad" id="s_com_raze_cocina_domain_Platillo_Orden_cantidad" object="${platillo_orden}" z="Y9tvfDddd07ckSMdy+IxOlk1pDk="/>
+        <field:display field="agregados" id="s_com_raze_cocina_domain_Platillo_Orden_agregados" object="${platillo_orden}" z="3JdIqvna2pT3ErNetXSPsPPqKq4="/>
+        <field:display field="precioUnitario" id="s_com_raze_cocina_domain_Platillo_Orden_precioUnitario" object="${platillo_orden}" z="BXvkE935VA7t6pJ3l672ThnRSAc="/>
+    </page:show>
+</div>

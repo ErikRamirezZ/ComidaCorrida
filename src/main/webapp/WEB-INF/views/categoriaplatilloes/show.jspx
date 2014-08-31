@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_raze_cocina_reference_CategoriaPlatillo" object="${categoriaplatillo}" path="/categoriaplatilloes" z="cDJXRcXQYFTmT+FTmK8qrJ/3nvM=">
+        <field:display field="nombre" id="s_com_raze_cocina_reference_CategoriaPlatillo_nombre" object="${categoriaplatillo}" z="F3sjiXkr9pTtMd4e+HhonM3r+wg="/>
+        <field:display field="descripcion" id="s_com_raze_cocina_reference_CategoriaPlatillo_descripcion" object="${categoriaplatillo}" z="UCx3dQsJM5DPVOIT05P1mBK10fY="/>
+    </page:show>
+</div>

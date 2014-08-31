@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_raze_cocina_domain_Bebida_Orden" object="${bebida_orden}" path="/bebida_ordens" z="t42mjsJt7LEEeTX62fREWr02yXw=">
+        <field:display field="bebida" id="s_com_raze_cocina_domain_Bebida_Orden_bebida" object="${bebida_orden}" z="4cIO8wO0gN8rRvwcXRXB6IPzQcQ="/>
+        <field:display field="cantidad" id="s_com_raze_cocina_domain_Bebida_Orden_cantidad" object="${bebida_orden}" z="7YqZDSciZLglFMHLeJswRPma0z0="/>
+        <field:display field="precioUnitario" id="s_com_raze_cocina_domain_Bebida_Orden_precioUnitario" object="${bebida_orden}" z="3kQwHJflINjBKZR4za/vrCrUD3U="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_raze_cocina_domain_Bebida" items="${bebidas}" z="EoGB7s6BpxDGvfqXw5UFRR/OdXY=">
+        <table:table data="${bebidas}" id="l_com_raze_cocina_domain_Bebida" path="/bebidas" z="1I9aIdlaqMQsUbyT6Fg/tFTFIuE=">
+            <table:column id="c_com_raze_cocina_domain_Bebida_nombre" property="nombre" z="Qo1UdD8f6/RD06zNeM25xNh9aGU="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_descripcion" property="descripcion" z="6WjJRQJK80sOhS1W9Ar5Z8GsROk="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_categoria" property="categoria" z="Bdn2yp4iufvCZ3TzG/sD4oQOv9k="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_disponibles" property="disponibles" z="TsignjQ6ubMeLDPuMTPE8wwUExk="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_precio" property="precio" z="1wc3yUJlzfyTNlYZfI2FipLOLik="/>
+            <table:column id="c_com_raze_cocina_domain_Bebida_foto" property="foto" z="FnwkOoV/ZNNKNsxzU4ii9oSUbHg="/>
+        </table:table>
+    </page:list>
+</div>

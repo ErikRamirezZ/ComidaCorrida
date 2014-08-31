@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_raze_cocina_domain_Platillo_Orden" items="${platillo_ordens}" z="xvv5irMVEj9VexXU6GB8vWbLvTE=">
+        <table:table data="${platillo_ordens}" id="l_com_raze_cocina_domain_Platillo_Orden" path="/platillo_ordens" z="MA7NKZ4/FVne9P2IMUOwntfiXeg=">
+            <table:column id="c_com_raze_cocina_domain_Platillo_Orden_platillo" property="platillo" z="H5aDiLMvWd2+DhLLZShnt0sh+RM="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_Orden_cantidad" property="cantidad" z="B1HTrcbhj3kigfA7zz0pn1/Qm4c="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_Orden_agregados" property="agregados" z="FEJaAEwJaItoZuEYhXZK1WKTyFA="/>
+            <table:column id="c_com_raze_cocina_domain_Platillo_Orden_precioUnitario" property="precioUnitario" z="CkA6FUU5sJwWSCMcURZ9L/6JzQ4="/>
+        </table:table>
+    </page:list>
+</div>

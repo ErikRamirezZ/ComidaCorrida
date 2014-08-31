@@ -1,0 +1,83 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-31 16:03:12
+project --topLevelPackage com.raze.cocina --projectName ComidaCorrida
+jpa setup --provider HIBERNATE --database MYSQL --databaseName ComidaCorrida
+entity jpa --class ~.reference.CategoriaBebida --activeRecord false --testAutomatically 
+entity jpa --class ~.reference.CategoriaPlatillo --activeRecord false --testAutomatically 
+entity jpa --class ~.reference.Estatus --activeRecord false --testAutomatically 
+entity jpa --class ~.domain.Usuario --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Agregado --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Bebida --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Platillo --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Bebida_Orden --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Platillo_Orden --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Orden --activeRecord false --testAutomatically
+field string --fieldName nombre --notNull --class ~.reference.CategoriaBebida
+field string --fieldName descripcion --notNull
+field string --fieldName nombre --notNull --class ~.reference.CategoriaPlatillo
+field string --fieldName descripcion --notNull
+field string --fieldName estatus --notNull --class ~.reference.Estatus 
+field string --fieldName descripcion --notNull 
+field string --fieldName nombre --notNull --sizeMax 250 --class ~.domain.Usuario 
+field string --fieldName domicilio --notNull --sizeMax 250
+field email template --fieldName correoE
+field string --fieldName telefono --sizeMax 20
+field string --fieldName observaciones --sizeMax 250
+field string --fieldName nombre --notNull --sizeMax 50 --class ~.domain.Agregado
+field string --fieldName descripcion --notNull --sizeMax 100
+field number --fieldName disponibles --type int
+field string --fieldName nombre --notNull --sizeMax 50 --class ~.domain.Bebida
+field string --fieldName descripcion --notNull --sizeMax 250
+field reference --fieldName categoria --type ~.reference.CategoriaBebida
+field number --fieldName disponibles --type int
+field number --fieldName precio --type java.math.BigDecimal
+field file --fieldName foto --contentType JPG --autoUpload true
+field string --fieldName nombre --notNull --sizeMax 50 --class ~.domain.Platillo
+field string --fieldName descripcion --notNull --sizeMax 250
+field reference --fieldName categoria --type ~.reference.CategoriaPlatillo
+field number --fieldName disponibles --type int
+field number --fieldName precio --type java.math.BigDecimal
+field file --fieldName foto --contentType JPG --autoUpload true
+field reference --fieldName bebida --type ~.domain.Bebida --class ~.domain.Bebida_Orden
+field number --fieldName cantidad --type int --notNull
+field number --fieldName precioUnitario --type java.math.BigDecimal --notNull 
+field reference --fieldName platillo --type ~.domain.Platillo --notNull --class ~.domain.Platillo_Orden
+field number --fieldName cantidad --type int --notNull
+field set --fieldName agregados --type ~.domain.Agregado
+field number --fieldName precioUnitario --type java.math.BigDecimal --notNull 
+field reference --fieldName usuario --type ~.domain.Usuario --class ~.domain.Orden
+field reference --fieldName estatus --type ~.reference.Estatus
+field date --fieldName fecha --type java.util.Date --notNull
+field string --fieldName observaciones --sizeMax 250
+field set --fieldName platillosOrden --type ~.domain.Platillo_Orden
+field set --fieldName bebidasOrden --type ~.domain.Bebida_Orden
+field number --fieldName descuento --type int --max 100
+repository jpa --interface ~.repository.CategoriaBebidaRepository --entity ~.reference.CategoriaBebida 
+repository jpa --interface ~.repository.CategoriaPlatilloRepository --entity ~.reference.CategoriaPlatillo 
+repository jpa --interface ~.repository.EstatusRepository --entity ~.reference.Estatus 
+repository jpa --interface ~.repository.UsuarioRepository --entity ~.domain.Usuario
+repository jpa --interface ~.repository.AgregadoRepository --entity ~.domain.Agregado
+repository jpa --interface ~.repository.BebidaRepository --entity ~.domain.Bebida
+repository jpa --interface ~.repository.PlatilloRepository --entity ~.domain.Platillo
+repository jpa --interface ~.repository.Bebida_OrdenRepository --entity ~.domain.Bebida_Orden
+repository jpa --interface ~.repository.Platillo_OrdenRepository --entity ~.domain.Platillo_Orden
+repository jpa --interface ~.repository.OrdenRepository --entity ~.domain.Orden
+service type --interface ~.service.CategoriaBebidaService --entity ~.reference.CategoriaBebida 
+service type --interface ~.service.CategoriaPlatilloService --entity ~.reference.CategoriaPlatillo 
+service type --interface ~.service.EstatusService --entity ~.reference.Estatus 
+service type --interface ~.service.UsuarioService --entity ~.domain.Usuario
+service type --interface ~.service.AgregadoService --entity ~.domain.Agregado
+service type --interface ~.service.BebidaService --entity ~.domain.Bebida
+service type --interface ~.service.PlatilloService --entity ~.domain.Platillo
+service type --interface ~.service.Bebida_OrdenService --entity ~.domain.Bebida_Orden
+service type --interface ~.service.Platillo_OrdenService --entity ~.domain.Platillo_Orden
+service type --interface ~.service.OrdenService --entity ~.domain.Orden
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.web
+web mvc setup
+web mvc language --code es
+web mvc all --package ~.web
+logging setup --level ERROR
+// script --file comidaCorrida.roo
+exit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-08-31 16:06:28

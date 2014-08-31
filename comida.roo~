@@ -1,0 +1,119 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-30 15:41:56
+
+//Init Project
+project --topLevelPackage com.raze.cocina --projectName ComidaCorrida
+
+//Provider
+jpa setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT --databaseName comidaCorrida
+
+//Reference
+entity jpa --class ~.reference.CategoriaBebida --activeRecord false --testAutomatically 
+entity jpa --class ~.reference.CategoriaPlatillo --activeRecord false --testAutomatically 
+entity jpa --class ~.reference.Status --activeRecord false --testAutomatically 
+
+//Domain
+entity jpa --class com.raze.cocina.domain.Usuario --activeRecord false --testAutomatically
+entity jpa --class com.raze.cocina.domain.Agregado --activeRecord false --testAutomatically
+entity jpa --class com.raze.cocina.domain.Bebida --activeRecord false --testAutomatically
+entity jpa --class com.raze.cocina.domain.Platillo --activeRecord false --testAutomatically
+entity jpa --class com.raze.cocina.domain.Bebida_Orden --activeRecord false --testAutomatically
+entity jpa --class com.raze.cocina.domain.Platillo_Orden --activeRecord false --testAutomatically
+entity jpa --class com.raze.cocina.domain.Orden --activeRecord false --testAutomatically
+
+//~.reference.CategoriaBebida
+field string --fieldName nombre --notNull --class ~.reference.CategoriaBebida
+field string --fieldName descripcion --notNull
+
+//--class ~.reference.CategoriaPlatillo
+field string --fieldName nombre --notNull --class ~.reference.CategoriaPlatillo
+field string --fieldName descripcion --notNull
+
+//--class ~.reference.Status 
+field string --fieldName status --notNull --class ~.reference.Status 
+field string --fieldName descripcion --notNull 
+
+//--class ~.domain.Usuario 
+field string --fieldName nombre --notNull --sizeMax 250 --class ~.domain.Usuario 
+field string --fieldName domicilio --notNull --sizeMax 250
+field email template --fieldName correoE
+field string --fieldName telefono --sizeMax 20
+field string --fieldName observaciones --sizeMax 250
+
+//--class ~.domain.Agregado
+field string --fieldName nombre --notNull --sizeMax 50 --class ~.domain.Agregado
+field string --fieldName descripcion --notNull --sizeMax 100
+field number --fieldName disponibles --type int
+
+//--class ~.domain.Bebida
+field string --fieldName nombre --notNull --sizeMax 50 --class ~.domain.Bebida
+field string --fieldName descripcion --notNull --sizeMax 250
+field reference --fieldName categoria --type ~.reference.CategoriaBebida --notNull
+field number --fieldName disponibles --type int
+field number --fieldName precio --type float
+field file --fieldName foto --contentType JPG --autoUpload true
+
+//--class ~.domain.Platillo
+field string --fieldName nombre --notNull --sizeMax 50 --class ~.domain.Platillo
+field string --fieldName descripcion --notNull --sizeMax 250
+field reference --fieldName categoria --type ~.reference.CategoriaPlatillo --notNull
+field number --fieldName disponibles --type int
+field number --fieldName precio --type float
+field file --fieldName foto --contentType JPG --autoUpload true
+
+//--class ~.domain.Bebida_Orden
+field reference --fieldName bebida --type ~.domain.Bebida --notNull --class ~.domain.Bebida_Orden
+field number --fieldName cantidad --type int --notNull
+field number --fieldName precioUnitario --type double --notNull 
+
+//--class ~.domain.Platillo_Orden
+field reference --fieldName platillo --type ~.domain.Platillo --notNull --class ~.domain.Platillo_Orden
+field number --fieldName cantidad --type int --notNull
+field set --fieldName agregados --type ~.domain.Agregado
+field number --fieldName precioUnitario --type double --notNull 
+
+//--class ~.domain.Orden
+field reference --fieldName usuario --type ~.domain.Usuario --notNull --class ~.domain.Orden
+field reference --fieldName status --type ~.reference.Status --notNull
+field date --fieldName fecha --type java.util.Date --notNull
+field string --fieldName observaciones --sizeMax 250
+field set --fieldName platillosOrden --type ~.domain.Platillo_Orden --notNull
+field set --fieldName bebidasOrden --type ~.domain.Bebida_Orden
+field number --fieldName descuento --type int --max 100 --min 0 --value 0x
+
+// Define a repository layer for persistence
+repository jpa --interface ~.repository.CategoriaBebidaRepository --entity ~.reference.CategoriaBebida 
+repository jpa --interface ~.repository.CategoriaPlatilloRepository --entity ~.reference.CategoriaPlatillo 
+repository jpa --interface ~.repository.StatusRepository --entity ~.reference.Status 
+repository jpa --interface ~.repository.UsuarioRepository --entity ~.domain.Usuario
+repository jpa --interface ~.repository.AgregadoRepository --entity ~.domain.Agregado
+repository jpa --interface ~.repository.BebidaRepository --entity ~.domain.Bebida
+repository jpa --interface ~.repository.PlatilloRepository --entity ~.domain.Platillo
+repository jpa --interface ~.repository.Bebida_OrdenRepository --entity ~.domain.Bebida_Orden
+repository jpa --interface ~.repository.Platillo_OrdenRepository --entity ~.domain.Platillo_Orden
+repository jpa --interface ~.repository.OrdenRepository --entity ~.domain.Orden
+
+// Define a service/facade layer
+service type --interface ~.service.CategoriaBebidaService --entity ~.reference.CategoriaBebida 
+service type --interface ~.service.CategoriaPlatilloService --entity ~.reference.CategoriaPlatillo 
+service type --interface ~.service.StatusService --entity ~.reference.Status 
+service type --interface ~.service.UsuarioService --entity ~.domain.Usuario
+service type --interface ~.service.AgregadoService --entity ~.domain.Agregado
+service type --interface ~.service.BebidaService --entity ~.domain.Bebida
+service type --interface ~.service.PlatilloService --entity ~.domain.Platillo
+service type --interface ~.service.Bebida_OrdenService --entity ~.domain.Bebida_Orden
+service type --interface ~.service.Platillo_OrdenService --entity ~.domain.Platillo_Orden
+service type --interface ~.service.OrdenService --entity ~.domain.Orden
+
+// Offer JSON remoting for all domain types through Spring MVC
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.web
+
+//Web tier
+web mvc setup
+web mvc language --code es
+web mvc all --package ~.web
+
+//Logging
+logging setup --level INFO
+
